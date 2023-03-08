@@ -1,9 +1,18 @@
 #include <Arduino.h>
+#include <PIDControl.h>
+
+SimplePID control;
+
+float error = 0 ;
 
 void setup() {
-  // put your setup code here, to run once:
+  control.begin();
+  control.setGains(1,0,0);
+  control.setOutLimits(255);
+  control.setIntegralLimits(50);
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  control.calulate_out(error);
 }

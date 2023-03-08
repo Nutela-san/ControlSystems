@@ -1,0 +1,37 @@
+#######################################
+# Coloreado de sintaxis para libreria 
+# ControlSystems en Arduino IDE
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Simple PID	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin               KEYWORD2
+setGains            KEYWORD2
+setOutLimits        KEYWORD2
+setOutLimits        KEYWORD2
+setIntegralLimits   KEYWORD2
+setIntegralLimits   KEYWORD2
+calulate_out        KEYWORD2
+doIntegral          KEYWORD2
+doDerivate          KEYWORD2
+
+#######################################
+# Structs (KEYWORD3)
+#######################################
+
+time_scale  KEYWORD3
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
+
