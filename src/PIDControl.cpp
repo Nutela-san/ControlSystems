@@ -93,7 +93,7 @@ float SimplePID::calulate_out(float e){
                 control_out = rang_out[0];
             }
         }
-
+        last_t = current_t;
     }
     
     return control_out;
