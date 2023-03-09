@@ -1,6 +1,6 @@
 {
     "name": "ControlSystems",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ",
     "keywords": "control, PID, fuzzy, perceptron, UPIIZ, IPN, CMR-UPIIZ",
     "repository": {

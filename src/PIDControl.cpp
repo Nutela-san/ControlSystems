@@ -15,7 +15,7 @@ void SimplePID::begin(time_scale time_unit = MILISECONDS, ulong min_periodo = 1)
             break;
         }
         case MICROISECONDS:{
-            scale_t = 1.0/1000.0 ;
+            scale_t = 1.0/1000000.0 ;
             break;
         }
     }
@@ -38,8 +38,8 @@ void SimplePID::setOutLimits(float r){
 }
 
 void SimplePID::setIntegralLimits(float r_min, float r_max){
-    rang_out[0] = r_min;
-    rang_out[1] = r_max;
+    rang_integral[0] = r_min;
+    rang_integral[1] = r_max;
     en_integral_limit = true;
 }
 
