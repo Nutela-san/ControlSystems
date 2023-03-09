@@ -1,8 +1,8 @@
 {
     "name": "ControlSystems",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ",
-    "keywords": "control, control systemas, PID, fuzzy control, perceptron, UPIIZ, IPN, CMR-UPIIZ",
+    "keywords": "control, PID, fuzzy, perceptron, UPIIZ, IPN, CMR-UPIIZ",
     "repository": {
         "type": "git",
         "url": "https://github.com/Nutela-san/ControlSystems.git"

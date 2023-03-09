@@ -30,7 +30,7 @@ public:
 
     SimplePID(){}
 
-    void begin(time_scale time_unit = MICROISECONDS, ulong min_periodo = 1);
+    void begin(time_scale time_unit = MILISECONDS, ulong min_periodo = 1);
 
     void setGains(float kp, float ki, float kd);
 
