@@ -13,7 +13,7 @@
 
 #include <PIDControl.h>
 #include <InterCom.h>
-#include <Servo.h>
+//#include <Servo.h>
 
 //--- Defincion de PINES (para arduino UNO)---
 uint8_t trig = 2, echo = 3, pin_servo = 5;
@@ -25,7 +25,7 @@ SimplePID control;
 
 SimpleComand comandos;
 
-Servo actuador;
+//Servo actuador;
 
 void config_pines()
 {
@@ -33,7 +33,7 @@ void config_pines()
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
 
-  actuador.attach(pin_servo);
+  //actuador.attach(pin_servo);
 }
 
 void info()
@@ -82,7 +82,7 @@ float leerDistancia()
 
 void move_servo(float degrees)
 {
-  actuador.write(90 + degrees);
+  //actuador.write(90 + degrees);
 }
 
 void setup()
