@@ -1,6 +1,6 @@
 {
     "name": "ControlSystems",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ",
     "keywords": "control, PID, fuzzy, perceptron, UPIIZ, IPN, CMR-UPIIZ",
     "repository": {
@@ -11,6 +11,11 @@
         {
             "name": "Pablo Contreras",
             "email": "lcontrerasa1701@alumno.ipn.mx",
+            "maintainer": true
+        },
+        {
+            "name": "CMR-UPIIZ",
+            "email": "clubcmrupiiz@gmail.com",
             "maintainer": true
         },
         {
