@@ -1,6 +1,6 @@
 #include "PIDControl.h"
 
-void SimplePID::begin(time_scale time_unit = MILISECONDS, ulong min_periodo = 1){
+void SimplePID::begin(time_scale time_unit, ulong min_periodo){
     last_t = millis();
     last_e = 0;
     r_int = 0;
