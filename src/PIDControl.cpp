@@ -30,7 +30,7 @@ void SimplePID::setGains(float kp, float ki, float kd){
 void SimplePID::setOutLimits(float r_min, float r_max){
     rang_out[0] = r_min;
     rang_out[1] = r_max;
-    en_integral_limit = true;
+    en_out_limit = true;
 }
 
 void SimplePID::setOutLimits(float r){
