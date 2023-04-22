@@ -7,31 +7,36 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Simple PID	KEYWORD1
+SimplePID	KEYWORD1
+PIDControl.h	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin               KEYWORD2
-setGains            KEYWORD2
-setOutLimits        KEYWORD2
-setOutLimits        KEYWORD2
-setIntegralLimits   KEYWORD2
-setIntegralLimits   KEYWORD2
-calulate_out        KEYWORD2
-doIntegral          KEYWORD2
-doDerivate          KEYWORD2
+begin	KEYWORD2
+setGains	KEYWORD2
+setOutLimits	KEYWORD2
+setIntegralLimits	KEYWORD2
+calulate_out	KEYWORD2
+doIntegral	KEYWORD2
+doDerivate	KEYWORD2
 
 #######################################
 # Structs (KEYWORD3)
 #######################################
 
-time_scale  KEYWORD3
+kp	KEYWORD3
+ki	KEYWORD3
+kd	KEYWORD3
+
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-
+ulong	LITERAL1
+time_scale	LITERAL1
+MILISECONDS	LITERAL1
+MICROISECONDS	LITERAL1
 
