@@ -11,7 +11,7 @@
 
 */
 
-#include <PIDControl.h>
+#include <SimplePID.h>
 #include <InterCom.h>
 //#include <Servo.h>
 
@@ -58,7 +58,6 @@ void info()
 
 void config_comandos()
 {
-  comandos.begin(115200);
   comandos.enable_echo(true);
 
   comandos.addComand("t", &setpoint);
@@ -66,6 +65,8 @@ void config_comandos()
   comandos.addComand("i", &control.ki);
   comandos.addComand("d", &control.kd);
   comandos.addComand("control info", info);
+
+  comandos.begin(115200);
 }
 
 float leerDistancia()
@@ -90,14 +91,12 @@ void setup()
 
   config_pines();
 
-  control.begin(MILISECONDS, 30); // inicializando controlador,
-                                  // configura por default la escala de tiempo en MILISECONDS y un tiempo minimo de 1ms
-
   control.setGains(1, 0, 0); // configura las ganacias kp, ki y kd
 
   control.setOutLimits(80); // limites simetricos (minimo = -80 , maximo = 80) que usaremos como ° para el servo
 
-  control.setIntegralLimits(20); // limites simetricos (minimo = -20 , maximo = 20)
+  control.begin(MILLISECONDS, 30); // inicializando controlador,
+                                  // configura por default la escala de tiempo en MILISECONDS y un tiempo minimo de 1ms
 
   config_comandos();
 }

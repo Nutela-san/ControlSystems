@@ -1,4 +1,4 @@
-#include <PIDControl.h>
+#include <SimplePID.h>
 
 SimplePID control;  //crear objeto para manejar el control
 
@@ -10,9 +10,6 @@ void setup(){
   Confuguracion de los demas modulos y pines
   */
 
-  control.begin();  // inicializando controlador,
-                    // configura por default la escala de tiempo en MILISECONDS y un tiempo minimo de 1ms
-
   control.setGains(1, 0, 0);  // configura las ganacias kp, ki y kd
 
   control.setOutLimits(255);  // activa y configura los limites de
@@ -21,9 +18,9 @@ void setup(){
                               // la forma asimetrica es control.setOutLimits(min_limit, max_limit)
                               // selecionando de forma individual rl limite minimo y el maximo.
 
-  control.setIntegralLimits(50);  // De igual forma que setOutLimits, activa y configura
-                                  // los limites en para la variable que guarda la integral.
-                                  // El metodo se puede usar de forma simetrica y asimetrica.
+  control.begin();  // inicializando controlador,
+                    // configura por default la escala de tiempo en MILLISECONDS y un tiempo minimo de 10ms
+
 }
 
 void loop(){

@@ -1,8 +1,8 @@
 {
     "name": "ControlSystems",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ",
-    "keywords": "control, PID, fuzzy, perceptron, UPIIZ, IPN, CMR-UPIIZ",
+    "keywords": "control, PID, fuzzy, perceptron, filters, UPIIZ, IPN, CMR-UPIIZ",
     "repository": {
         "type": "git",
         "url": "https://github.com/Nutela-san/ControlSystems.git"
@@ -23,7 +23,7 @@
             "email": "dcabreras1900@alumno.ipn.mx"
         }
     ],
-    "headers": "PIDControl.h",
+    "headers": ["SimplePID.h","SimpleFilters.h"],
     "license": "MIT",
     "frameworks": "arduino",
     "platforms": "*",
@@ -33,7 +33,9 @@
             ".pio",
             ".vscode",
             "*.ini",
-            "src/main.cpp"
+            "src/main.cpp",
+            "include/AdvancePID.h",
+            "src/AdvancePID.cpp"
         ]
     }
 }

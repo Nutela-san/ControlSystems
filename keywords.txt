@@ -8,7 +8,10 @@
 #######################################
 
 SimplePID	KEYWORD1
-PIDControl.h	KEYWORD1
+SimpleFilters	KEYWORD1
+MA_Filter	KEYWORD1
+EMA_Filter	KEYWORD1
+RC_FirstO_Filter	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -17,10 +20,11 @@ PIDControl.h	KEYWORD1
 begin	KEYWORD2
 setGains	KEYWORD2
 setOutLimits	KEYWORD2
-setIntegralLimits	KEYWORD2
 calulate_out	KEYWORD2
-doIntegral	KEYWORD2
-doDerivate	KEYWORD2
+reset	KEYWORD2
+doFilter	KEYWORD2
+setFreqCutout	KEYWORD2
+setSampleTime	KEYWORD2
 
 #######################################
 # Structs (KEYWORD3)
@@ -39,4 +43,7 @@ ulong	LITERAL1
 time_scale	LITERAL1
 MILISECONDS	LITERAL1
 MICROISECONDS	LITERAL1
+Filter_t	LITERAL1
+LPF	LITERAL1
+HPF	LITERAL1
 
