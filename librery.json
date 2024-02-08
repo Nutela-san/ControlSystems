@@ -1,8 +1,8 @@
 {
     "name": "ControlSystems",
     "version": "0.2.1",
+    "keywords": "control, pid, filters, upiiz, ipn, cmr-upiiz",
     "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ",
-    "keywords": "control, PID, fuzzy, perceptron, filters, UPIIZ, IPN, CMR-UPIIZ",
     "repository": {
         "type": "git",
         "url": "https://github.com/Nutela-san/ControlSystems.git"
@@ -35,7 +35,8 @@
             "*.ini",
             "src/main.cpp",
             "include/AdvancePID.h",
-            "src/AdvancePID.cpp"
+            "src/AdvancePID.cpp",
+            "librery.properties"
         ]
     }
 }
