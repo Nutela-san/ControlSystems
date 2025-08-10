@@ -1,8 +1,8 @@
 {
     "name": "ControlSystems",
-    "version": "0.2.1",
+    "version": "0.2.6",
     "keywords": "control, pid, filters, upiiz, ipn, cmr-upiiz",
-    "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ",
+    "description": "Libreria para la implementación de los sistemas de control más comunes desarollada por CMR UPIIZ.",
     "repository": {
         "type": "git",
         "url": "https://github.com/Nutela-san/ControlSystems.git"

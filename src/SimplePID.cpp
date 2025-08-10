@@ -38,7 +38,6 @@ void SimplePID::setOutLimits(float r){
   setOutLimits(-r, r);
 }
 
-
 float SimplePID::calulate_out(float e){
   switch (type_t){
     case MILLISECONDS:{
@@ -56,27 +55,35 @@ float SimplePID::calulate_out(float e){
 
     r_prop = e * kp;
     r_dev = kd*(e - last_e) / ((float)increse_t * scale_t);
-    r_int = ki*(r_int + e * (float)increse_t * scale_t);
+    r_int += e * (float)increse_t * scale_t;
+    float r_int_gain = ki*r_int;
 
     if(en_out_limit){
-      (range_out[1] > r_prop) ? range_integral[1] = range_out[1] - r_prop : range_integral[1] = 0.0f;
-      (range_out[0] < r_prop) ? range_integral[0] = range_out[0] - r_prop : range_integral[0] = 0.0f;
-      r_int = constrain(r_int,range_integral[0],range_integral[1]);
+      (range_out[1] > r_prop) ? range_integral[1] = (range_out[1] - r_prop) : range_integral[1] = 0.0f;
+      (range_out[0] < r_prop) ? range_integral[0] = (range_out[0] - r_prop) : range_integral[0] = 0.0f;
+      r_int_gain = constrain(r_int_gain,range_integral[0],range_integral[1]);
+      if(ki == 0){
+        r_int = 0;
+      }else{
+        r_int = constrain(r_int,range_integral[0],range_integral[1]);
+      }
     } 
 
-    control_out = r_prop + r_int + r_dev;
+    control_out = r_prop + r_int_gain + r_dev;
 
     if (en_out_limit){
       control_out = constrain(control_out,range_out[0],range_out[1]);
     }
     last_t = current_t;
+    last_e = e;
   }
 
   return control_out;
 }
 
-void SimplePID::reset(){
+void SimplePID::reset(float base_error){
   r_int = 0.0f;
+  last_e = base_error;
   control_out = 0.0f;
   switch (type_t){
     case MILLISECONDS:{

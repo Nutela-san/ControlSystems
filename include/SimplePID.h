@@ -37,7 +37,7 @@ public:
 
     float calulate_out(float e);
 
-    void reset();
+    void reset(float base_error = 0.0f);
 
 
     ~SimplePID(){}

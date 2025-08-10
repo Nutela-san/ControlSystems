@@ -46,13 +46,15 @@ template <typename data_t>
 class EMA_Filter{
   private:
     data_t last_value = 0;
-    float alpha = 1;
   public:
+    float alpha = 1;
+
     explicit EMA_Filter(){}
+
     explicit EMA_Filter(float alpha){
       setAlpha(alpha);
     }
-
+    
     void setAlpha(float alpha){
       this->alpha = constrain(alpha,0.0f,1.0f);
     }
