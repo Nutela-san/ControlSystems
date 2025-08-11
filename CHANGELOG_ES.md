@@ -2,8 +2,8 @@
 Lista de los cambios realizados en la librería de ControlSystems. </br>
 
 ## [v0.2.6] - 09/08/2025
-- Correción de bug en sistema anti-acomulación del ternino integral.
-- Se añadio el ChangeLog en español (CHANGELOG_ES.md) he inglés (CHANGELOG_EN.md).
+- Corrección de bug en sistema anti-acumulación del término integral.
+- Se añadió el ChangeLog en español (CHANGELOG_ES.md) he inglés (CHANGELOG_EN.md).
 - Método *reset()* en SimplePID mejorado. Ahora se puede definir el valor del error anterior (valor predeterminado se configura a 0).
 
 
